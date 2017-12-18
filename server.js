@@ -36,8 +36,8 @@ else{
 });
 }
 
-var db = promise;
-
+var db = mongoose.connection;
+console.log(db);
 // Show any Mongoose errors
 db.on('error', function(err) {
   console.log('Mongoose Error: ', err);
