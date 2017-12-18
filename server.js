@@ -26,6 +26,7 @@ app.set('view engine', 'handlebars');
 // ---------------------------------------------------------------------------------------------------------------
 // Connect to localhost if not a production environment
 if(process.env.NODE_ENV == 'production'){
+	mongoose.Promise = global.Promise;
   var promise = mongoose.connect('mongodb://heroku_nnqcztb9:sbgc182ph2piq4dhr55gs3usum@ds135926.mlab.com:35926/heroku_nnqcztb9');
 }
 else{
